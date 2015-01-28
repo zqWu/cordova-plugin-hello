@@ -2,8 +2,8 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.example.hello"
-    version="0.0.1">
+    id="com.example.hello.abc"
+    version="0.0.2">
 
     <name>Hello</name>
     <description>demo plugin</description>
@@ -16,7 +16,7 @@
 
 
     <js-module src="www/hello.js" name="hello">
-        <clobbers name="greet" />
+        <clobbers target="greet123" />
     </js-module>
 
     <platform name="android">
