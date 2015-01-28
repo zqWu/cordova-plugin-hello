@@ -8,7 +8,7 @@
     <name>Hello</name>
     <description>demo plugin</description>
     <author>a fool guy</author>
-    <keywords>foo,bar,example</author>
+    <keywords>foo,bar,example</keywords>
     <license>Apache 2.0 License</license>
 
     <asset src="www/hello.js" target="hello.js"/>	<!-- file -->
