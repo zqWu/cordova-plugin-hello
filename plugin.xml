@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.example.hello"
+    version="0.0.1">
+
+    <!-- https://github.com/zqWu/cordova-plugin-hello.git -->
+    <name>Hello</name>
+    <description>demo plugin</description>
+    <author>a fool guy</author>
+    <keywords>foo,bar,example</author>
+    <license>Apache 2.0 License</license>
+
+	<!-- asset, 
+		one or more,
+		will be copied into www dir -->
+    <asset src="www/hello.js" target="hello.js"/>	<!-- file -->
+    <asset src="www/abc" target="abc"/>     <!-- foloder -->
+
+	<!-- js-module, 
+		one or more,
+		 -->
+    <js-module src="www/hello.js" name="hello">
+    	<clobbers name="greet" /> <!-- like: window.greet = require('hello.js')-->
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Hello">
+                <param name="android-package" value="com.example.plugin.Hello"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+    </platform>
+
+    <engines>
+    	<engine name="cordova" version=">=3.5.0" platform="android"/>
+    	<engine name="cordova-plugman" version=">=3.5.0" platform="android"/>
+    </engines>
+
+</plugin>
